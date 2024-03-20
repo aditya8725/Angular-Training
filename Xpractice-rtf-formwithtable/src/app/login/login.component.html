@@ -1,0 +1,55 @@
+<div>
+    <p class="title">Student Form</p>
+
+    <form [formGroup]="stform" (ngSubmit)="onClicker()">
+        <div>
+            <label>Name</label>
+            <input type="text" formControlName="name">
+        </div>
+
+        <div>
+            <label>Age</label>
+            <input type="number" formControlName="age">
+        </div>
+
+        <div>
+            <label>Gender</label>
+            <input type="text" formControlName="gender">
+        </div>
+
+        <div>
+            <label>Salary</label>
+            <input type="number" formControlName="salary">
+        </div>
+        
+        <br>
+        <button type="submit" [disabled]="stform.invalid">Submit</button>
+    </form>
+
+
+
+    <table *ngIf="data.length>0; else f">
+        <thead>
+            <tr>
+                <th>Name :</th>
+                <th>Age :</th>
+                <th>Gender</th>
+                <th>Salary :</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let d of data" >
+                <td>{{d.n | titlecase}}</td>
+                <td>{{d.a }}</td>
+                <td>{{d.g| titlecase}}</td>
+                <td>{{d.s }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #f>
+        <p style="text-align: center; color: red;" >"No Data present....!!!"</p>
+    </ng-template>
+
+</div>
