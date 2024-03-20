@@ -1,0 +1,16 @@
+<p class="alert alert-primary">
+    String Interpolation = {{message}}
+</p>
+
+<p class="box bgyellow">
+   Event Binding =  <button (click)="clickHandler()">Click Me!</button>
+</p>
+
+<p class="box bgaqua">
+    <!-- <input type="text" value="{{message}}"> -->  <!--sting interpolation-->
+    Property Binding = <input type="text" [value]="message">    <!--Property binding-->
+</p>
+
+<p class="box bgred">
+   Two Way Data Binding = <input type="text" [(ngModel)]="message">
+</p>
