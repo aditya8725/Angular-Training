@@ -1,0 +1,39 @@
+<!-- <table>
+    <thead class="thead-dark">
+        <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Student Score</th>
+     </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let s of students">
+            <td>{{s.studentId}}</td>
+            <td>{{s.studentName}}</td>
+            <td>{{s.studentScore}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Student Id</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Student Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students" [ngStyle]="{'background-color':  getBackgroundColor()}">
+        <td>{{s.studentId}}</td>
+        <td>{{s.studentName | titlecase}}</td>
+        <td [ngClass]="{color:s.studentScore < 60 ? true:false}">{{s.studentScore/100 |percent}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  
