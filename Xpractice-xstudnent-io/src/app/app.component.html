@@ -1,0 +1,17 @@
+
+<div>
+    <app-add-student (add)="addStudent($event)"></app-add-student>
+  </div>
+
+
+  <div *ngIf ="students.length>0; else nostudent">
+    <div>
+      <div *ngFor="let s of students">
+        <app-list-student [student]="s"></app-list-student>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #nostudent>
+  <p>No student data is present</p>
+  </ng-template>
