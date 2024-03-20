@@ -1,0 +1,13 @@
+<p>add-student works!</p>
+<form (ngSubmit)="addHandler(form)" #form="ngForm">
+    <label>Student ID</label>
+    <input type="text" name="studentId" ngModel>
+
+    <label>Student Name</label>
+    <input type="text" name="studentName" ngModel>
+
+    <label>Student Score</label>
+    <input type="text" name="studentScore" ngModel>
+
+    <button type="submit">Add Student</button>
+</form>
