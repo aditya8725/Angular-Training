@@ -1,0 +1,14 @@
+{
+    "players": [
+      {
+        "playerId": "101",
+        "playerName": "Aditya",
+        "playerAge": "23"
+      },
+      {
+        "playerId": "102",
+        "playerName": "Shivam",
+        "playerAge": "19"
+      }
+    ]
+}

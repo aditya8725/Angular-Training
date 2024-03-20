@@ -1,0 +1,22 @@
+<form (ngSubmit)="addHandler(f)" #f="ngForm">
+
+    <div>
+        <div>Player Id</div>
+        <div> <input type="text" name="playerId" ngModel required> </div>
+    </div>
+
+    <div>
+        <div>Player Name</div>
+        <div> <input type="text" name="PlayerName" ngModel required> </div>
+    </div>
+
+    <div>
+        <div>Player Age</div>
+        <div> <input type="text" name="playerAge" ngModel required> </div>
+    </div>
+
+    <div>
+        <button  type="submit" [disabled]="f.invalid">Add Student</button>
+    </div>
+
+</form>

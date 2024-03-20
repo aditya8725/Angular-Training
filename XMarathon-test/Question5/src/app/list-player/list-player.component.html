@@ -1,0 +1,21 @@
+<table class="table">
+    <thead >
+      <tr *ngIf="players.length>0 ; else nostudent">
+        <th >Player ID</th>
+        <th >Player Name</th>
+        <th >Player Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of players" [ngStyle]="{'background-color':  getBackgroundColor()}">
+        <td>{{p.playerId}}</td>
+        <td>{{s.playerName | titlecase}}</td>
+        <td [ngClass]="{color:s.playerAge < 60 ? true:false}">{{s.playerAge}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  <ng-template #nostudent>
+    <p >No Player found in database</p>
+  </ng-template>

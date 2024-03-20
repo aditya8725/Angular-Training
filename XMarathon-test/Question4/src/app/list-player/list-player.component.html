@@ -1,0 +1,22 @@
+<!-- <div *ngFor = "let s of players">
+    {{s.playerId}} | {{s.playerName}} | {{s.playerAge}}
+  </div>
+  
+   -->
+
+  <table class="table">
+    <thead>
+        <tr>
+            <th>Player Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of players">
+        <td *ngIf="s.playerAge>0 && s.playerAge<80">{{s.playerId}}</td>
+        <td *ngIf="s.playerAge>0 && s.playerAge<80">{{s.playerName | uppercase}}</td>
+        <td *ngIf="s.playerAge>0 && s.playerAge<80">{{s.playerAge}}</td>
+      </tr>
+    </tbody>
+  </table>
