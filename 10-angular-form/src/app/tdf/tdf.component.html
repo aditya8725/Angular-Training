@@ -1,0 +1,15 @@
+<form (ngSubmit) = "onSubmit(form)" #form="ngForm">
+    <div>
+      <label style=" padding: 12px 12px 12px 0;display: inline-block;">Student Id  </label>
+      <input type="number" name="StudentId" ngModel>
+    </div>
+
+    <div>
+      <label style=" padding: 12px 12px 12px 0;display: inline-block;">Student Name  </label>
+      <input type="text" name="StudentName" ngModel>
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-danger">Add Student</button>
+    </div>
+  </form>
