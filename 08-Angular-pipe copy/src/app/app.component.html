@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="text-light bg-dark p-3">Learning Angular Pipe</h1>
+  <p>{{companyName | uppercase}}</p>
+  <p>{{num | percent}}</p>
+  <p>{{num | currency}}</p>
+  <p>{{num | currency:"INR"}}</p>
+  <p>{{student | json}}</p>
+  <p>{{studentName }}</p>
+  <p>{{studentName | slice:2-6}}</p>
+  
+  <hr>
+
+  <!-- custom pipe -->
+  <input type="text" [(ngModel)]="name" >
+  <p *ngFor="let n of studentName | search: name">
+    {{n}}
+  </p>
+  <hr>
+</div>
