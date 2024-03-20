@@ -1,0 +1,16 @@
+{
+  "name": "01-npm-starter",
+  "version": "1.0.0",
+  "description": "This is first npm project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "Aditya": "node index"
+  },
+  "author": "Aditya Ranjan Pradhan",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
