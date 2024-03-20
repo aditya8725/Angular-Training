@@ -1,0 +1,67 @@
+<div class="container">
+  <h1 class="text-light bg-dark p-3">Angular Pipe Assignment</h1>
+
+  <!-- custom pipe -->
+<!-- 
+
+  <table class="table">
+    <tr *ngFor="let e of employees">
+      <td>{{e.id}}</td>
+      <td>{{e.name}}</td>
+      <td>{{e.gender}}</td>
+      <td>{{e.salary}}</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table>
+    <tr *ngFor="let e of employees">
+      <td>{{e.id}}</td>
+      <td>{{e.name}}</td>
+      <td>{{e.gender | search:e.gender}}</td>
+      <td>{{e.salary}}</td>
+    </tr>
+  </table>
+</div>
+ -->
+
+<p style="font-weight: bold">Before adding custom pipe</p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of employees">
+      <td>{{e.id}}</td>
+      <td>{{e.name}}</td>
+      <td>{{e.gender}}</td>
+      <td>{{e.salary}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="font-weight: bold;">After adding custom pipe</p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of employees">
+      <td>{{e.id}}</td>
+      <td>{{e.name}}</td>
+      <td>{{e.gender | search:e.gender}}</td>
+      <td>{{e.salary}}</td>
+    </tr>
+  </tbody>
+</table>
