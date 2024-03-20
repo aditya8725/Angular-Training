@@ -1,0 +1,31 @@
+<p>tdf works!</p>
+
+<form (ngSubmit)="onClicker(form)" #form="ngForm">
+    <div>
+        <label>User ID </label>
+        <input type="text" name="userid" ngModel required>
+    </div>
+    <br>
+    <div>
+        <label>Password </label>
+        <input type="password" name="password" ngModel required>
+    </div>
+    <br>
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+
+</form>
+
+
+
+<div *ngIf="colorflag==1; else f">
+    <p style="color: green;">{{message}}</p>
+</div>
+
+<ng-template #f>
+    <p style="color: red;">{{message}}</p>
+</ng-template>
+
+<div *ngFor="let d of data">
+    <p>{{d.pass}}</p>
+    <p>{{d.user}}</p>
+</div>
