@@ -1,0 +1,17 @@
+
+<div>
+    <p>Last Name: </p>
+   <input type="text" [(ngModel)]="lastname">
+</div>
+
+<div>
+<p>Displaying LastName </p>
+<p> <input type="text" value="{{lastname}}"></p>
+</div>
+
+
+<br>
+
+<div>
+    <button (click)="clickHandler() " class="button" [disabled]="lastname===''">BUTTON</button>
+</div>

@@ -1,0 +1,30 @@
+<div *ngIf="colorflag==1;" class="msg">
+    <p style="color: white;">{{message}}</p>
+</div>
+
+<div>
+    <p class="title">Registration Form</p>
+
+    <form [formGroup]="regform" (ngSubmit)="onClicker()">
+        <div>
+            <label>User Name</label>
+            <input type="text" formControlName="username">
+        </div>
+
+        <div>
+            <label>Password</label>
+            <input type="password" formControlName="password">
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="email" formControlName="email">
+        </div>
+
+        
+        <br>
+        <button type="submit" [disabled]="regform.invalid">Register User</button>
+    </form>
+
+</div>
+
