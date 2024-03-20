@@ -1,0 +1,383 @@
+===> mkdir folder name
+===> npm install typescript
+===> rightclick and make a new file called: main1.ts
+
+==> to run :: ---> tsc main1.ts
+	      ---> node main1.js
+
+
+// First name and last name
+
+class Student
+{
+    firstName: string = "";
+    lastName: string = "";
+    
+
+    constructor(first,last)
+    {
+        this.firstName = first;
+        this.lastName = last;
+    }
+    display(): void
+    {
+        console.log("first name= "+ this.firstName );
+        console.log(`last name = ${this.lastName}`);
+    }
+}
+
+""
+let student1: Student = new Student('Aditya','Pradhan');
+student1.display();
+
+
+// add 2 numbers
+
+class Displaynumber
+{
+    a1: number = 100;
+    a2: number = 200;
+    
+
+    add()
+    {
+        let sum = this.a1+this.a2;
+        console.log(`Sum = $(sum)`)
+    }
+
+}
+
+let obj:Displaynumber = new Displaynumber();
+obj.add();
+
+
+// Factorial
+
+
+//class factorial
+
+class factorialdemo
+{
+    multi() {
+        throw new Error("Method not implemented.");
+    }
+    numm1:number;
+
+    constructor(numm1:number)
+    {
+        this.numm1 = numm1;
+    }
+    
+    fact():any
+    {
+        let fact=1;
+        for(let i=1;i<=this.numm1;i++)
+        {
+            fact = fact*i;
+        }
+        console.log(fact);
+       
+    }
+}
+
+let objf:factorialdemo = new factorialdemo(5);
+objf.fact();
+
+// Multiplication
+
+class multiplication
+{
+    numm1:number;
+
+    constructor(numm1:number)
+    {
+        this.numm1 = numm1;
+    }
+    
+    multi():void
+    {
+        for(let i=1;i<=10;i++)
+        {
+            console.log(this.numm1*i)
+            console.log(`${this.numm1} * ${i} = ${this.numm1}`)
+        }
+       
+    }
+}
+
+let mulobj:multiplication = new multiplication(5);
+mulobj.multi();
+
+//Fibbonacci 
+
+
+class Fibonacci{
+    term1:number = 0;
+    term2:number = 1;
+    term3:number = this.term1 + this.term2;
+    sum:number = 0;
+
+    num:number;
+    constructor(n:number){
+        this.num = n;
+    }
+
+    fibo(){
+        if(this.num == 0){
+            // console.log(0);
+            return 0;
+        }
+        else if(this.num == 1){
+            // console.log(0);
+            return 0;
+        }
+        else{
+            // console.log(this.term1);
+            // console.log(this.term2);
+            this.sum = this.sum + this.term3;
+            for(let i = 2; i <= this.num; i++){
+                this.sum += this.term3;
+                // console.log(this.term3);
+                this.term1 = this.term2;
+                this.term2 = this.term3;
+                this.term3 = this.term1 + this.term2;
+            }
+        }
+        return this.sum;
+    }
+}
+
+let obj:Fibonacci = new Fibonacci(5);
+let ans = obj.fibo();
+console.log(`Sum of the series is : ${ans}`);
+
+
+// Fibbonacci the prin the numbers
+class Fibonacci{
+    term1:number = 0;
+    term2:number = 1;
+    term3:number = this.term1 + this.term2;
+    sum:number = 0;
+
+    num:number;
+    constructor(n:number){
+        this.num = n;
+    }
+
+    fibo(){
+        if(this.num == 0){
+            return 0;
+        }
+        else if(this.num == 1){
+            // console.log(0);
+            return 0;
+        }
+        else{
+            for(let i = 2; i < this.num; i++){
+                 console.log(this.term3);
+                this.term1 = this.term2;
+                this.term2 = this.term3;
+                this.term3 = this.term1 + this.term2;
+            }
+        }
+        return this.sum;
+    }
+}
+
+let obj:Fibonacci = new Fibonacci(10);
+let ans = obj.fibo();
+
+
+
+// Prime Number
+class primenumber
+{
+    n:number;
+
+    constructor(val:number)
+    {
+        this.n = val;
+    }
+    
+    checkprime():void
+    {
+        for(let i=2;i*i<=this.n;i++)
+        {
+            if(this.n % i == 0)
+            {
+                console.log(`${this.n} = This is not prime number`);
+                return;
+            }
+        }
+        console.log(`${this.n} = This is a prime number`);
+       
+    }
+}
+
+let objpn:primenumber = new primenumber(5);
+objpn.checkprime();
+
+
+//Swapping 2 numbers
+
+class swapping
+{
+    a:number;
+    b:number;
+
+    constructor(a:number,b:number)
+    {
+        this.a=a;
+        this.b=b;
+
+        console.log(`Before swapping: ${a}, ${b}`);
+        
+        const [newa,newb] = this.doswap(this.a,this.b)
+        console.log(`After swapping:${newa},${newb}`)
+    }
+
+    doswap(a,b)
+    {
+        let temp =a;
+        a=b;
+        b=temp;
+
+        return [a,b];
+    }
+    
+    
+}
+
+let  objswap: swapping = new swapping(10,20);
+
+
+//Binomial coefficeint
+
+
+//class factorial
+
+class binocoeff
+{
+
+    n:number;
+    r:number;
+
+    constructor(n:number,r:number)
+    {
+        this.n = n;
+        this.r=r;
+    }
+    
+    fact(n:number):any
+    {
+        let fact=1;
+        for(let i=1;i<=this.n;i++)
+        {
+            fact = fact*i;
+        }
+        return fact;
+    }
+
+    binno():number
+    {
+        if(this.r>this.n)
+        {
+            console.log("Invalid input...!!!")
+        }
+        const nfact = this.fact(this.n);
+        const rfact = this.fact(this.r);
+        const nmrfact = this.fact(this.n-this.r);
+
+
+        return nfact / (rfact*nmrfact);
+
+    }
+}
+
+const n=5;
+const k =2;
+let objf:binocoeff = new binocoeff(n,k);
+
+const result = objf.binno();
+console.log(result);
+
+
+
+//Sum of digits
+class SumOfDigits {
+    n: number;
+
+    constructor(n: number) {
+        this.n = n;
+    }
+
+    sofd(): any {
+        let sod = 0;
+        let tempN = this.n;
+        while(tempN>0)
+        {
+            let lad = tempN % 10;
+            sod += lad;
+            tempN = Math.floor(tempN / 10);
+        }
+        return sod;
+    }
+}
+
+
+const objSod: SumOfDigits = new SumOfDigits(123);
+const res = objSod.sofd();
+console.log(`Sum of digits: ${res}`);
+
+
+//print first n natural numbers
+
+class printfirstnno
+{
+    n:number;
+
+    constructor(n:number)
+    {
+        this.n = n;
+    }
+
+    sofnd():void
+    {
+        let count = 1;
+        while(count<=this.n)
+        {
+            console.log(count);
+            count++;
+        }
+    }
+}
+
+let objsof:printfirstnno = new printfirstnno(5);
+objsof.sofnd();
+
+// sum of first n natrual numbers
+
+class sumoffirstnno
+{
+    n:number;
+
+    constructor(n:number)
+    {
+        this.n = n;
+    }
+
+    sofffn():void
+    {
+        let count = 1;
+        let sum=0
+        while(count<=this.n)
+        {
+            sum=sum+count
+            count++;
+        }
+        console.log(sum);
+    }
+}
+
+let objs:sumoffirstnno = new sumoffirstnno(5);
+objs.sofffn();

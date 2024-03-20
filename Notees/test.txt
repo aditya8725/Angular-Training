@@ -1,0 +1,76 @@
+let numarr: numbers[]=[1,2,3,4]
+
+let strArr: string[]=['abc'.'bcd','cde','def']
+
+function add(n1:number,n2:number):number
+{
+return n1+n2
+}
+
+
+make a class
+
+
+make a form
+user id =kpit
+pw = admin
+
+donot allow to submit
+
+print ==> successlly logged in-> green color
+
+
+
+
+
+
+
+export class LoginComponent {
+
+
+
+  data1:any={};
+  data:any[]=[];
+
+  onClicker(form:NgForm)
+  {
+    const{
+      firstname,lastname,email,gender,married,country} =this.data1
+
+
+    if(firstname && lastname && email && gender && married && country)
+    {
+      
+      this.data.push({firstname,lastname,email,gender,married,country});
+    }
+
+    form.resetForm()
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Student Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{student.studentId}}</td>
+            <td> {{student.studentName}}</td>
+            <td>{{student.studentScore}}</td>
+        </tr>
+    </tbody>
+</table>

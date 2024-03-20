@@ -1,0 +1,61 @@
+Compoenet and data Binding
+===========================
+
+npm install -g @angular/cli
+
+npm list -g @ angular/cli
+
+set path=%path%:_________;
+
+cd file name
+
+ng server -o (package.json) 
+
+
+
+====================================
+generate module --> ng g m module_name
+
+component inside specific module --> ng g c student/add-student
+
+angular service ---> ng g s service_name
+
+======================================
+component and data binding
+import module in student.module.ts
+
+=======================================
+
+I/O
+
+1) create project
+2) create module --> ng g m module_name
+3) generate component --> ng g c student/add/studet,list
+
+=======================================
+
+
+
+
+
+
+=======================================
+service
+
+1) create project
+2) create module --> ng g m module_name
+3) generate component --> ng g c student/add/studet,list
+4) create component --> ng g s student/student
+
+
+
+
+
+
+
+npm install json-server
+
+json-server
+
+npx json-server --watch studentdb.json
+

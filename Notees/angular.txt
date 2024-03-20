@@ -1,0 +1,343 @@
+angular 
+-------
+
+set path=%path%;C:\Users\adityap16\AppData\Roaming\npm
+
+setting path
+
+
+Microsoft Windows [Version 10.0.19045.3930]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\Angular Training\Workspace>mkdir 05-typescript-starter
+
+D:\Angular Training\Workspace>cd 05-typescript-starter
+
+D:\Angular Training\Workspace\05-typescript-starter>code .
+'code' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\Angular Training\Workspace\05-typescript-starter>npm init --yes
+Wrote to D:\Angular Training\Workspace\05-typescript-starter\package.json:
+
+{
+  "name": "05-typescript-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+
+D:\Angular Training\Workspace\05-typescript-starter>npm install typescript
+
+added 1 package, and audited 2 packages in 3s
+
+found 0 vulnerabilities
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc
+'tsc' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\Angular Training\Workspace\05-typescript-starter>set path=%path%;C:\Windows\System32\cmd.exe
+
+D:\Angular Training\Workspace\05-typescript-starter>path=%path%;D:\Angular Training\Workspace\05-typescript-starter\node_modules\.bin
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc
+Version 5.3.3
+tsc: The TypeScript Compiler - Version 5.3.3
+                                                                                                                     TS
+COMMON COMMANDS
+
+  tsc
+  Compiles the current project (tsconfig.json in the working directory.)
+
+  tsc app.ts util.ts
+  Ignoring tsconfig.json, compiles the specified files with default compiler options.
+
+  tsc -b
+  Build a composite project in the working directory.
+
+  tsc --init
+  Creates a tsconfig.json with the recommended settings in the working directory.
+
+  tsc -p ./path/to/tsconfig.json
+  Compiles the TypeScript project located at the specified path.
+
+  tsc --help --all
+  An expanded version of this information, showing all possible compiler options
+
+  tsc --noEmit
+  tsc --target esnext
+  Compiles the current project, with additional settings.
+
+COMMAND LINE FLAGS
+
+     --help, -h  Print this message.
+
+    --watch, -w  Watch input files.
+
+          --all  Show all compiler options.
+
+  --version, -v  Print the compiler's version.
+
+         --init  Initializes a TypeScript project and creates a tsconfig.json file.
+
+  --project, -p  Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
+
+    --build, -b  Build one or more projects and their dependencies, if out of date
+
+   --showConfig  Print the final configuration instead of building.
+
+COMMON COMPILER OPTIONS
+
+               --pretty  Enable color and formatting in TypeScript's output to make compiler errors easier to read.
+                  type:  boolean
+               default:  true
+
+      --declaration, -d  Generate .d.ts files from TypeScript and JavaScript files in your project.
+                  type:  boolean
+               default:  `false`, unless `composite` is set
+
+       --declarationMap  Create sourcemaps for d.ts files.
+                  type:  boolean
+               default:  false
+
+  --emitDeclarationOnly  Only output d.ts files and not JavaScript files.
+                  type:  boolean
+               default:  false
+
+            --sourceMap  Create source map files for emitted JavaScript files.
+                  type:  boolean
+               default:  false
+
+           --target, -t  Set the JavaScript language version for emitted JavaScript and include compatible library decla                         rations.
+                one of:  es3, es5, es6/es2015, es2016, es2017, es2018, es2019, es2020, es2021, es2022, esnext
+               default:  es5
+
+           --module, -m  Specify what module code is generated.
+                one of:  none, commonjs, amd, umd, system, es6/es2015, es2020, es2022, esnext, node16, nodenext
+               default:  undefined
+
+                  --lib  Specify a set of bundled library declaration files that describe the target runtime environment                         .
+           one or more:  es5, es6/es2015, es7/es2016, es2017, es2018, es2019, es2020, es2021, es2022, es2023, esnext, do                         m, dom.iterable, webworker, webworker.importscripts, webworker.iterable, scripthost, es2015.cor                         e, es2015.collection, es2015.generator, es2015.iterable, es2015.promise, es2015.proxy, es2015.r                         eflect, es2015.symbol, es2015.symbol.wellknown, es2016.array.include, es2017.date, es2017.objec                         t, es2017.sharedmemory, es2017.string, es2017.intl, es2017.typedarrays, es2018.asyncgenerator,                          es2018.asynciterable/esnext.asynciterable, es2018.intl, es2018.promise, es2018.regexp, es2019.a                         rray, es2019.object, es2019.string, es2019.symbol/esnext.symbol, es2019.intl, es2020.bigint/esn                         ext.bigint, es2020.date, es2020.promise, es2020.sharedmemory, es2020.string, es2020.symbol.well                         known, es2020.intl, es2020.number, es2021.promise/esnext.promise, es2021.string, es2021.weakref                         /esnext.weakref, es2021.intl, es2022.array, es2022.error, es2022.intl, es2022.object, es2022.sh                         aredmemory, es2022.string/esnext.string, es2022.regexp, es2023.array/esnext.array, es2023.colle                         ction/esnext.collection, esnext.intl, esnext.disposable, esnext.decorators, decorators, decorat                         ors.legacy
+               default:  undefined
+
+              --allowJs  Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors fro                         m these files.
+                  type:  boolean
+               default:  false
+
+              --checkJs  Enable error reporting in type-checked JavaScript files.
+                  type:  boolean
+               default:  false
+
+                  --jsx  Specify what JSX code is generated.
+                one of:  preserve, react, react-native, react-jsx, react-jsxdev
+               default:  undefined
+
+              --outFile  Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, als                         o designates a file that bundles all .d.ts output.
+
+               --outDir  Specify an output folder for all emitted files.
+
+       --removeComments  Disable emitting comments.
+                  type:  boolean
+               default:  false
+
+               --noEmit  Disable emitting files from a compilation.
+                  type:  boolean
+               default:  false
+
+               --strict  Enable all strict type-checking options.
+                  type:  boolean
+               default:  false
+
+                --types  Specify type package names to be included without being referenced in a source file.
+
+      --esModuleInterop  Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowS                         yntheticDefaultImports' for type compatibility.
+                  type:  boolean
+               default:  false
+
+You can learn about all of the compiler options at https://aka.ms/tsc
+
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main
+
+D:\Angular Training\Workspace\05-typescript-starter>npm main
+Unknown command: "main"
+
+To see a list of supported npm commands, run:
+  npm help
+
+D:\Angular Training\Workspace\05-typescript-starter>npm main.js
+Unknown command: "main.js"
+
+To see a list of supported npm commands, run:
+  npm help
+
+D:\Angular Training\Workspace\05-typescript-starter>npm main
+Unknown command: "main"
+
+To see a list of supported npm commands, run:
+  npm help
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main
+
+D:\Angular Training\Workspace\05-typescript-starter>node main
+1000
+number
+KPIT
+string
+{}
+object
+false
+boolean
+undefined
+undefined
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main
+
+D:\Angular Training\Workspace\05-typescript-starter>npm main
+Unknown command: "main"
+
+To see a list of supported npm commands, run:
+  npm help
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main
+
+D:\Angular Training\Workspace\05-typescript-starter>node main
+1000
+number
+------------------
+KPIT
+string
+------------------
+{}
+object
+------------------
+false
+boolean
+------------------
+undefined
+undefined
+------------------
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main2
+
+D:\Angular Training\Workspace\05-typescript-starter>node main2
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main2
+
+D:\Angular Training\Workspace\05-typescript-starter>node main
+1000
+number
+------------------
+KPIT
+string
+------------------
+{}
+object
+------------------
+false
+boolean
+------------------
+undefined
+undefined
+------------------
+
+D:\Angular Training\Workspace\05-typescript-starter>node main2
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main2
+
+D:\Angular Training\Workspace\05-typescript-starter>
+D:\Angular Training\Workspace\05-typescript-starter>node main2
+1000
+----------------
+KPIT
+----------------
+true
+----------------
+{}
+----------------
+undefined
+----------------
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main3
+
+D:\Angular Training\Workspace\05-typescript-starter>node main3
+first = Aditya
+last name = $(this.lastName)
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main3
+
+D:\Angular Training\Workspace\05-typescript-starter>node main3
+first = Aditya
+last name = Pradhan
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main3
+
+D:\Angular Training\Workspace\05-typescript-starter>node main2
+1000
+----------------
+KPIT
+----------------
+true
+----------------
+{}
+----------------
+undefined
+----------------
+
+D:\Angular Training\Workspace\05-typescript-starter>tsc main3
+
+D:\Angular Training\Workspace\05-typescript-starter>node main3
+first name= Aditya
+last name = Pradhan
+
+D:\Angular Training\Workspace>npm list -g @angular/cli
+C:\Users\adityap16\AppData\Roaming\npm
+`-- @angular/cli@17.1.3
+
+
+D:\Angular Training\Workspace>set path=%path%;C:\Users\adityap16\AppData\Roaming\npm
+
+D:\Angular Training\Workspace>ng new 06-student-app --standalone=false
+? Which stylesheet format would you like to use? CSS
+? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? Yes
+CREATE 06-student-app/angular.json (3141 bytes)
+CREATE 06-student-app/package.json (1287 bytes)
+CREATE 06-student-app/README.md (1093 bytes)
+CREATE 06-student-app/tsconfig.json (936 bytes)
+CREATE 06-student-app/.editorconfig (290 bytes)
+CREATE 06-student-app/.gitignore (590 bytes)
+CREATE 06-student-app/tsconfig.app.json (342 bytes)
+CREATE 06-student-app/tsconfig.spec.json (287 bytes)
+CREATE 06-student-app/server.ts (1782 bytes)
+CREATE 06-student-app/.vscode/extensions.json (134 bytes)
+CREATE 06-student-app/.vscode/launch.json (490 bytes)
+CREATE 06-student-app/.vscode/tasks.json (980 bytes)
+CREATE 06-student-app/src/main.ts (221 bytes)
+CREATE 06-student-app/src/favicon.ico (15086 bytes)
+CREATE 06-student-app/src/index.html (311 bytes)
+CREATE 06-student-app/src/styles.css (81 bytes)
+CREATE 06-student-app/src/main.server.ts (71 bytes)
+CREATE 06-student-app/src/app/app-routing.module.ts (255 bytes)
+CREATE 06-student-app/src/app/app.module.ts (467 bytes)
+CREATE 06-student-app/src/app/app.component.html (20239 bytes)
+CREATE 06-student-app/src/app/app.component.spec.ts (1112 bytes)
+CREATE 06-student-app/src/app/app.component.ts (225 bytes)
+CREATE 06-student-app/src/app/app.component.css (0 bytes)
+CREATE 06-student-app/src/app/app.module.server.ts (332 bytes)
+CREATE 06-student-app/src/assets/.gitkeep (0 bytes)
+√ Packages installed successfully.
+'git' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\Angular Training\Workspace>
