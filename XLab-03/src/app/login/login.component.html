@@ -1,0 +1,25 @@
+<div >
+    <p>Welcome to my login</p>
+    <div>
+        <div>
+            <p>User ID</p>
+            <input type="text" [(ngModel)]="username" required>
+        </div>
+
+        <div>
+            <p>Password</p>
+            <input type="password" [(ngModel)]="password" required>
+        </div>
+
+        <br>
+        <div><button [disabled] = "username==='' || password===''"(click)="checkpw()">Submit</button></div>
+    </div>
+    <br>
+    <div *ngIf="flag==1 ;else f">
+       <p style="color: green;">{{message}}</p> 
+    </div>
+
+    <ng-template #f>
+        <p style="color: red;">{{message}}</p> 
+    </ng-template>
+</div>

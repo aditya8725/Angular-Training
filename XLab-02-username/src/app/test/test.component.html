@@ -1,0 +1,9 @@
+<p>test works!</p>
+<div>
+    <p>User Name</p>
+    <input type="text" [(ngModel)] = "username">
+</div>
+
+<button [disabled]="username===''" (click)="onClicker()">Submit</button>
+
+<p>{{message}}</p>
