@@ -1,0 +1,15 @@
+<p>rtf works!</p>
+
+<form [formGroup] = "loginform" (ngSubmit)="onClicker()" >
+    <label>User id</label>
+    <input type="text" formControlName="userid">
+
+    <label>Password</label>
+    <input type="password" formControlName = "password">
+
+    <button type="submit">Submit</button>
+</form>
+
+<div>
+    {{message}}
+</div>

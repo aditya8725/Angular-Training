@@ -1,0 +1,20 @@
+<p>login works!</p>
+
+<div>
+    <p>User Id</p>
+    <input type="text" [(ngModel)]="userid">
+    <p>Password</p>
+    <input type="password" [(ngModel)]="password">
+</div>
+<br>
+<div><button (click) = "onClicker()">Submit</button></div>
+
+<div *ngIf="colorflag==1; else f">
+    <p style="color: green;">{{message}}</p>
+</div>
+
+<ng-template #f>
+    <p style="color: red;">{{message}}</p>
+</ng-template>
+
+
